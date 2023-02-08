@@ -1,4 +1,4 @@
-from enums.model import PredictionType
+from enums.prediction_type import PredictionType
 from evaluation.base import Evaluator, EvaluationFactory
 
 
