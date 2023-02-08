@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: pi
+spec:
+  template:
+    spec:
+      containers:
+      - name: pi
+        image: python:3.10
+        command: ["python", "-c",
+                  "from from src.evaluation.base import EvaluationFactory;"
+                  "evaluator = EvaluationFactory.generate_evaluator("
+                  "{self.environment}, {self.feature_type});"
+                  "evaluator.train_and_evaluate({x}, {y}));"  # x and y should be passed to pod as JSON formatted environment variable
+                  "evaluator.dump_results()"]
+      restartPolicy: Never
+  backoffLimit: 4
