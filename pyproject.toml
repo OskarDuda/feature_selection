@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "feature-selection"
+version = "0.1.0"
+description = ""
+authors = ["oskar-duda <oskar.duda.pl@gmail.com>"]
+readme = "README.md"
+packages = [{include = "feature_selection"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+kubernetes = "^25.3.0"
+numpy = "^1.24.1"
+scikit-learn = "^1.2.1"
+diagrams = "^0.23.3"
+graphviz = "^0.20.1"
+flask = "^2.2.2"
+pandas = "^1.5.3"
+pyarrow = "^11.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
