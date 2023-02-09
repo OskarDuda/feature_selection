@@ -16,6 +16,7 @@ graphviz = "^0.20.1"
 flask = "^2.2.2"
 pandas = "^1.5.3"
 pyarrow = "^11.0.0"
+thefuck = "^3.32"
 
 
 [build-system]
